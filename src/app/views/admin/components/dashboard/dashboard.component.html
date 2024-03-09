@@ -1,0 +1,353 @@
+<div class="dashboard dashboard_1">
+  <div class="full_container">
+    <!-- Sidebar  -->
+    <nav id="sidebar">
+      <div class="sidebar_blog_1">
+        <div class="sidebar_user_info">
+          <div class="icon_setting"></div>
+          <div class="user_profle_side">
+            <div class="user_img">
+              <img
+                class="img-responsive"
+                src="../../../../../assets/images/Adminlogo.png"
+                alt="#"
+              />
+            </div>
+            <div class="user_info">
+              <h6>Prahim Mhmd</h6>
+              <p><span class="online_animation"></span> Online</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar_blog_2">
+        <h4>
+          <i class="fa fa-dashboard yellow_color px-2"></i>
+          <span>Dashboard</span>
+        </h4>
+        <ul class="list-unstyled components">
+          <li>
+            <a routerLink="managers"
+              ><i class="fa fa-table purple_color2"></i> <span>Mangers</span></a
+            >
+          </li>
+          <li>
+            <a routerLink="leaders"
+              ><i class="fa fa-briefcase blue1_color"></i>
+              <span>Leaders</span></a
+            >
+          </li>
+          <li>
+            <a routerLink="sales">
+              <i class="fa fa-paper-plane red_color"></i> <span>Sales</span></a
+            >
+          </li>
+          <li>
+            <a routerLink="clients"
+              ><i class="fa fa-map purple_color2"></i> <span>Clients</span></a
+            >
+          </li>
+          <li>
+            <a><i class="fa fa-cog yellow_color"></i> <span>Settings</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div id="content">
+      <!-- topbar -->
+      <div class="topbar">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="full">
+            <div class="right_topbar dropdown">
+              <div class="icon_info">
+                <ul class="user_profile_dd">
+                  <li >
+                    <a
+                      ><img
+                        class="img-responsive rounded-circle"
+                        src="../../../../../assets/images/Adminlogo.png"
+                        alt="#"
+                      /><span class="name_user">Prahim</span></a>
+                      <div class="dropdown">
+                        <div class="dropdown-content">
+                          <!-- Dropdown menu items go here -->
+                          <a href="#">Add User</a>
+                          <a (click)="logout()">LogOut</a>
+                        </div>
+                      </div>
+
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!-- end topbar -->
+      <div class="midde_cont">
+        <div class="container-fluid">
+          <div class="row column_title">
+            <div class="col-md-12">
+              <div class="page_title">
+                <h2>Dashboard</h2>
+              </div>
+            </div>
+          </div>
+          <div class="row column1">
+            <div class="col-md-6 col-lg-3">
+              <div class="full counter_section margin_bottom_30">
+                <div class="couter_icon">
+                  <div>
+                    <i class="fa fa-user yellow_color"></i>
+                  </div>
+                </div>
+                <div class="counter_no">
+                  <div>
+                    <p class="total_no">1</p>
+                    <p class="head_couter">Manger</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="full counter_section margin_bottom_30">
+                <div class="couter_icon">
+                  <div>
+                    <i class="fa fa-user blue1_color"></i>
+                  </div>
+                </div>
+                <div class="counter_no">
+                  <div>
+                    <p class="total_no">20</p>
+                    <p class="head_couter">Leader</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="full counter_section margin_bottom_30">
+                <div class="couter_icon">
+                  <div>
+                    <i class="fa fa-user green_color"></i>
+                  </div>
+                </div>
+                <div class="counter_no">
+                  <div>
+                    <p class="total_no">50</p>
+                    <p class="head_couter">Sales</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="full counter_section margin_bottom_30">
+                <div class="couter_icon">
+                  <div>
+                    <i class="fa fa-user red_color"></i>
+                  </div>
+                </div>
+                <div class="counter_no">
+                  <div>
+                    <p class="total_no">154</p>
+                    <p class="head_couter">Clients</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row column1 social_media_section">
+            <div class="col-md-6 col-lg-3">
+              <div class="full socile_icons fb margin_bottom_30">
+                <div class="social_icon">
+                  <i class="fa-brands fa-facebook"></i>
+                </div>
+                <div class="social_cont">
+                  <ul>
+                    <li>
+                      <span><strong>35k</strong></span>
+                      <span>Friends</span>
+                    </li>
+                    <li>
+                      <span><strong>128</strong></span>
+                      <span>Feeds</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="full socile_icons tw margin_bottom_30">
+                <div class="social_icon">
+                  <i class="fa-brands fa-twitter"></i>
+                </div>
+                <div class="social_cont">
+                  <ul>
+                    <li>
+                      <span><strong>584k</strong></span>
+                      <span>Followers</span>
+                    </li>
+                    <li>
+                      <span><strong>978</strong></span>
+                      <span>Tweets</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="full socile_icons linked margin_bottom_30">
+                <div class="social_icon">
+                  <i class="fa-brands fa-linkedin"></i>
+                </div>
+                <div class="social_cont">
+                  <ul>
+                    <li>
+                      <span><strong>758+</strong></span>
+                      <span>Contacts</span>
+                    </li>
+                    <li>
+                      <span><strong>365</strong></span>
+                      <span>Feeds</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="full socile_icons google_p margin_bottom_30">
+                <div class="social_icon">
+                  <i class="fa-brands fa-google-plus"></i>
+                </div>
+                <div class="social_cont">
+                  <ul>
+                    <li>
+                      <span><strong>450</strong></span>
+                      <span>Followers</span>
+                    </li>
+                    <li>
+                      <span><strong>57</strong></span>
+                      <span>Circles</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- graph -->
+          <div class="row column2 graph margin_bottom_30">
+            <div class="col-md-l2 col-lg-12">
+              <div class="white_shd full">
+                <div class="full graph_head">
+                  <div class="heading1 margin_0">
+                    <h2>Details</h2>
+                  </div>
+                </div>
+
+                <!-- row -->
+                <div class="row margin_bottom_30">
+                  <div
+                    class="col-md-12 col-lg-4 widget_progress_section margin_bottom_30"
+                  >
+                    <div class="white_shd full">
+                      <div class="widget_progress_bar">
+                        <p class="progress_no">73%</p>
+                        <p class="progress_head">Sed ut perspi ciatis unde</p>
+                        <div class="progress_bar">
+                          <!-- Skill Bars -->
+                          <span class="skill" style="width: 73%"
+                            >Lorem ipsum dolor sit amet
+                            <span class="info_valume">73%</span></span
+                          >
+                          <div class="progress skill-bar">
+                            <div
+                              class="progress-bar progress-bar-animated progress-bar-striped"
+                              role="progressbar"
+                              aria-valuenow="73"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                              style="width: 73%"
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-md-12 col-lg-4 widget_progress_section margin_bottom_30"
+                  >
+                    <div class="white_shd full">
+                      <div class="widget_progress_bar">
+                        <p class="progress_no">90%</p>
+                        <p class="progress_head">Sed ut perspi ciatis unde</p>
+                        <div class="progress_bar">
+                          <!-- Skill Bars -->
+                          <span class="skill" style="width: 90%"
+                            >Lorem ipsum dolor sit amet
+                            <span class="info_valume">90%</span></span
+                          >
+                          <div class="progress skill-bar">
+                            <div
+                              class="progress-bar progress-bar-animated progress-bar-striped"
+                              role="progressbar"
+                              aria-valuenow="90"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                              style="width: 90%"
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-md-12 col-lg-4 widget_progress_section margin_bottom_30"
+                  >
+                    <div class="white_shd full">
+                      <div class="widget_progress_bar">
+                        <p class="progress_no">85%</p>
+                        <p class="progress_head">Sed ut perspi ciatis unde</p>
+                        <div class="progress_bar">
+                          <!-- Skill Bars -->
+                          <span class="skill" style="width: 85%"
+                            >Lorem ipsum dolor sit amet
+                            <span class="info_valume">85%</span></span
+                          >
+                          <div class="progress skill-bar">
+                            <div
+                              class="progress-bar progress-bar-animated progress-bar-striped"
+                              role="progressbar"
+                              aria-valuenow="85"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                              style="width: 85%"
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- end row -->
+
+                <div class="full graph_revenue">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="content">
+                        <div class="area_chart">
+                          <router-outlet></router-outlet>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end graph -->
+        </div>
+      </div>
+      <!-- end dashboard inner -->
+    </div>
+    <!-- end sidebar -->
+  </div>
+</div>

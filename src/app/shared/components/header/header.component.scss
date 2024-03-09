@@ -1,0 +1,36 @@
+.bg-gradient-primary-subtle {
+  background: #15283c
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-left: 10px;
+}
+.main-color{
+  color: #ffffff !important;
+}
+.nav-link:hover {
+  cursor: pointer;
+  color: #ffffff;
+}
+.cartitems{
+  padding: 3px;
+}
+.navbar-nav .nav-item:hover {
+  background-color: orangered;
+  color: #15283c;
+
+}
+
+.navbar-nav .nav-link {
+  color: black;
+}
+
+.navbar-nav .nav-item:hover .nav-link {
+  color: white;
+}
+button{
+  background-color: white;
+}

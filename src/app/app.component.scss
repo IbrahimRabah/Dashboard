@@ -1,0 +1,10 @@
+.main-content {
+  min-height: calc(100vh - 200px);
+  position: relative;
+}
+.app-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
