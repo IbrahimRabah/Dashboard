@@ -1,0 +1,69 @@
+form.p-fluid {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form.p-fluid label {
+    display: block;
+    margin-bottom: 0.3rem;
+    color: #333;
+    font-size: 1rem;
+}
+
+.p-inputnumber {
+    width: 100%;
+    border-radius: 4px;
+}
+
+/* Custom button style */
+button[pButton] {
+    background-color: #15283c;
+    color: #ffffff;
+    border: none;
+    margin-top: 10px;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button[pButton]:hover {
+    background-color: #1b334d;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .p-col-12.p-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+form.p-fluid label {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+    transition: color 0.3s ease-in-out;
+}
+
+form.p-fluid label:hover {
+    color: #0056b3;
+    cursor: pointer;
+}
+
+form.p-fluid .p-float-label:focus-within label {
+    color: #0056b3;
+}
+
+@media (max-width: 576px) {
+    form.p-fluid label {
+        font-size: 14px;
+    }
+}

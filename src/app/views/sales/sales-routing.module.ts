@@ -4,9 +4,9 @@ import { SalesHomeComponent } from './sales-home/sales-home.component';
 import { SalesHistoryComponent } from './sales-history/sales-history.component';
 
 const routes: Routes = [
-  {path:'',redirectTo:'salesHome', pathMatch:'full'},
-  {path:'salesHome',component:SalesHomeComponent},
-  {path:'salesHistory',component:SalesHistoryComponent},
+  { path: '', redirectTo: 'salesHome', pathMatch: 'full' },
+  { path: 'salesHome', component: SalesHomeComponent },
+  { path: 'salesHistory', component: SalesHistoryComponent },
 
 ];
 

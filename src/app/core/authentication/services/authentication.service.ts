@@ -8,6 +8,7 @@ import { environment } from 'src/environment';
 })
 export class AuthenticationService {
   baseUrl = environment.baseUrl;
+  currentUrl = "Account/";
   private isAuthenticatedSubject = new BehaviorSubject<boolean>(false);
   private isAdminSubject = new BehaviorSubject<boolean>(false);
 
@@ -20,12 +21,12 @@ export class AuthenticationService {
     return this.isAdminSubject.asObservable();
   }
   register(registerObj: any): Observable<any> {
-    const url = `${this.baseUrl}Register`
+    const url = `${this.baseUrl+this.currentUrl}Register`
     return this.http.post<any>(url, registerObj);
   }
 
   login(loginObj: any): Observable<any> {
-    const url = `${this.baseUrl}Login`;
+    const url = `${this.baseUrl+this.currentUrl}Login`;
     return this.http.post(url, loginObj).pipe(
       tap(() => {
         this.isAuthenticatedSubject.next(true);
