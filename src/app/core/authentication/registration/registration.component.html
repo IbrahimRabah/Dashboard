@@ -59,7 +59,7 @@
     <div class="form-group">
       <label for="role">Role</label>
       <select id="role" formControlName="role" class="form-control" [(ngModel)]="selectedRole">
-        <option type="number" *ngFor="let role of roleOptions" [ngValue]=role.id>{{role.value}}</option>
+        <option type="number" *ngFor="let role of roleOptions" [ngValue]=role.id>{{role.name}}</option>
       </select>
       <div class="error-message text-danger" *ngIf="registerationForm.get('role')?.touched && registerationForm.get('role')?.hasError('required')">
         Please select your role.
@@ -76,7 +76,7 @@
     <div class="form-group" *ngIf="isTeamLead == 2">
       <label for="role">TeamLeads</label>
       <select id="role" formControlName="teamLeaderId" class="form-control">
-        <option type="number" *ngFor="let teamLead of teamLeads" [ngValue]="teamLead.id.toString()">{{teamLead.value}}</option>
+        <option type="number" *ngFor="let teamLead of teamLeads" [ngValue]="teamLead.id.toString()">{{teamLead.name}}</option>
       </select>
     </div>
     <div class="form-group">

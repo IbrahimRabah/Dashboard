@@ -10,9 +10,9 @@ export class SalesService {
   currentUrl = "SalesDay";
   constructor(private httpClient: HttpClient) { }
 
-  getSalesDayBy(): Observable<any> {
+  getSalesDayBy(queryURL:string): Observable<any> {
 
-    return this.httpClient.get(`${this.baseUrl + this.currentUrl}`);
+    return this.httpClient.get(`${this.baseUrl + this.currentUrl}${queryURL}`);
   }
   addSalesDay(salesDay: any): Observable<any> {
     return this.httpClient.post(`${this.baseUrl + this.currentUrl}`, salesDay);
@@ -21,7 +21,7 @@ export class SalesService {
   getSalesDayById(salesDayId: string): Observable<any> {
     return this.httpClient.get(`${this.baseUrl + this.currentUrl}/${salesDayId}`);
   }
-  updateSalesDay(salesDayId: number, salesDay: any): Observable<any> {
+  updateSalesDay(salesDayId: string, salesDay: any): Observable<any> {
     return this.httpClient.put(`${this.baseUrl + this.currentUrl}/${salesDayId}`, salesDay);
   }
 }
