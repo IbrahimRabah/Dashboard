@@ -48,10 +48,12 @@ export class LoginComponent implements OnInit {
             else{
                 console.log(response.message);
                 this.apiError = response.message;
+                console.log("else")
               }
           },
           error: (err) => {
             this.apiError = err.message
+            console.log("error")
           }
         })
       } else {

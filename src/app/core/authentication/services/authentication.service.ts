@@ -12,7 +12,7 @@ export class AuthenticationService {
   private isAuthenticatedSubject = new BehaviorSubject<boolean>(false);
   private isAdminSubject = new BehaviorSubject<boolean>(false);
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
   get isAuthenticated$(): Observable<boolean> {
     return this.isAuthenticatedSubject.asObservable();
@@ -21,27 +21,34 @@ export class AuthenticationService {
     return this.isAdminSubject.asObservable();
   }
   register(registerObj: any): Observable<any> {
-    const url = `${this.baseUrl+this.currentUrl}Register`
+    const url = `${this.baseUrl + this.currentUrl}Register`
     return this.http.post<any>(url, registerObj);
   }
 
   login(loginObj: any): Observable<any> {
-    const url = `${this.baseUrl+this.currentUrl}Login`;
+    console.log("LOginn")
+    const url = `${this.baseUrl + this.currentUrl}Login`;
     return this.http.post(url, loginObj).pipe(
       tap(() => {
         this.isAuthenticatedSubject.next(true);
       })
     );
   }
-  logout()
-  {
+  logout() {
     this.isAuthenticatedSubject.next(false);
     localStorage.removeItem('userData');
   }
-  isAuthenticatedUser()
-  {
+  isAuthenticatedUser() {
     const token = localStorage.getItem('userData');
     this.isAuthenticatedSubject.next(!!token);
+  }
+
+  getToken() {
+    const userData = localStorage.getItem('userData');
+    const token = userData ? JSON.parse(userData).token : '';
+    return token;
+
+
   }
   // getUserRole() {
   //   const role = localStorage.getItem('role');
