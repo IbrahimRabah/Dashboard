@@ -18,6 +18,12 @@ const routes: Routes = [
     import('../app/core/authentication/authentication.module').then(
       (m)=>m.AuthenticationModule
     )
+  },
+  {
+    path:'client',loadChildren:()=>
+    import('../app/views/client/client.module').then(
+      (m)=>m.ClientModule
+    )
   }
 ];
 
